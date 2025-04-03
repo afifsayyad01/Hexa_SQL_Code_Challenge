@@ -58,7 +58,7 @@ where ownerId is null;
 
 -------------------------------------------
 
-select date_format(donationDate, '%M Y%') as monthyear,
+select date_format(donationDate, '%M %Y') as monthyear,
 coalesce(sum(donationAmount),0) as totalDonation
 from donations
 group by monthyear;
